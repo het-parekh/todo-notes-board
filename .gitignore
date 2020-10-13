@@ -11,6 +11,9 @@
 # production
 /build
 
+#UI WireFrame
+/UI_wireframe
+
 # misc
 .DS_Store
 .env.local

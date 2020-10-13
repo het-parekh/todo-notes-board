@@ -1,0 +1,16 @@
+{
+    "posts" : [
+        {
+            "id" : 0,
+            "title" : "ex 1",
+            "body":"This is the start",
+            "due_date":"24/9/2020",
+            "category":"tryhard",
+            "pos_x" : 24,
+            "pos_y" : 24,
+            "status": "done"
+        }
+        
+    ]
+    
+}

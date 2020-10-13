@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+/***********************
+Top NavBar
+***********************/
+
+.navbar-inner li {
+    line-height: 40px;
+    letter-spacing: 2px;
+    
+}
+.nav-link {
+    color:black;
+    border-top: 4px solid white;
+    transition: border-top 0.3s;
+    
+   
+    
+}
+.nav-link:hover {
+    border-top: 4px solid dodgerblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand {
+    letter-spacing: 4px;
+    border-top: 4px solid white;
+    transition: border-top 0.3s;
+}
+.brand:hover {
+    border-top: 4px solid dodgerblue;
+}
+.brand:hover {
+    border-top: 4px solid dodgerblue;
+}
+.header {
+    background-color: rgba(255, 255, 255, .95);
+   /* remove the gradient */
+    background-image: none !important;
+    border-bottom: 2px solid dodgerblue !important;
+    line-height: 40px !important;
+    box-shadow: 0 12px 6px -6px rgba(0, 0, 0, .2) !important;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+h3 {
+    transition: color 0.5s;
+}
+h3:hover {
+    color: rgba(36, 142, 255, .8);
+}
+
+/***********************
+Modal Login Form
+***********************/
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+.form-group:last-child {
+    margin: 0;
+}
+.form-group label {
+    display: block;
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.two .form-group label {
+    color: #fff;
+}
+.form-group input {
+    outline: none;
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: 0.3s ease;
+}
+.form-group input:focus {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.form-group button {
+    outline: none;
+    background: #4285f4;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form-group .form-remember {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+.form-group .form-remember input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 0 0;
+}
+
+.form-panel {
+    padding: 60px calc(5% + 60px) 60px 60px;
+    box-sizing: border-box;
+}
+.form-header {
+    margin: 0 0 40px;
+}
+.form-header h1 {
+    padding: 4px 0;
+    color: #4285f4;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/***********************
+Return back button
+***********************/
+#modal_head {
+    text-align: right
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.button_slide {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    font-weight: bolder;
+    color: white;
+    background-color:  dodgerblue;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 darkblue;
+    text-transform: uppercase;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
   }
-  to {
-    transform: rotate(360deg);
+
+  .slide_left:hover {
+    box-shadow: inset -400px 0 0 0px darkblue;
   }
-}
+
+
+
+ 
+
+
+
+
