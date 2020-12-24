@@ -54,12 +54,11 @@ class Main extends Component{
         }
 
         return(
-            <HashRouter basename="/">
+            <HashRouter basename="/myBoard">
             <div>
                 <Header />
-                <Switch location = {this.props.location}>
-                    <Route path = '/home' component = {HomePage}/>
-                    <Redirect to="/home" />
+                <Switch>
+                    <Route path = '/myBoard' component = {HomePage}/>
                 </Switch>
             </div>
             </HashRouter>
