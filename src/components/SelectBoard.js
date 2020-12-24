@@ -14,7 +14,7 @@ import {AiOutlineCloseCircle} from 'react-icons/ai'
 //Animation LEFT
 //Animation LEFT
 var clickCount = 0;
-class Select_Board extends Component{
+class SelectBoard extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -68,7 +68,7 @@ class Select_Board extends Component{
         return(
         <>
        
-            <Navbar className='py-0 px-0' style={{marginBottom:"20px",justifyContent:"flex-start"}} >
+            <Navbar className='py-0 px-0' style={{marginBottom:"20px",justifyContent:"flex-start",backgroundColor:"#fff"}} >
                 <Button  onClick={this.props.addBoard} outline color = 'success' style={{paddingBottom:'9px',marginTop:"0.6px",fontFamily:"Ink Free",borderRadius:"0px",marginBottom:"30px"}}><FaPlusCircle /> Add Board</Button>
                 {select_board}
             </Navbar>
@@ -88,4 +88,4 @@ class Select_Board extends Component{
 
 }
 
-export default Select_Board
+export default SelectBoard
