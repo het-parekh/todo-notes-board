@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "gh-pages-clean && rm -rf node_modules/.cache/gh-pages/ && git push https://github.com/het-parekh/todo-notes-board.git --delete gh-pages && yarn run build",
+    "predeploy": "gh-pages-clean && git push https://github.com/het-parekh/todo-notes-board.git --delete gh-pages && yarn run build",
     "deploy": "gh-pages -d build development --repo https://github.com/het-parekh/todo-notes-board.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
