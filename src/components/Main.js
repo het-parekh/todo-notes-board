@@ -54,11 +54,11 @@ class Main extends Component{
         }
 
         return(
-            <HashRouter basename="/myBoard">
+            <HashRouter basename="/">
             <div>
                 <Header />
                 <Switch>
-                    <Route path = '/myBoard' component = {HomePage}/>
+                    <Route exact path = '/' component = {HomePage}/>
                 </Switch>
             </div>
             </HashRouter>

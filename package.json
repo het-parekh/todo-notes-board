@@ -32,7 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build development --repo https://github.com/het-parekh/todo-notes-board.git",
+    "deploy": "git push https://github.com/het-parekh/todo-notes-board.git --delete gh-pages && gh-pages -d build development --repo https://github.com/het-parekh/todo-notes-board.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
