@@ -47,7 +47,7 @@ class Header extends Component{
     render()
     {
         return(
-        <div style={{backgroudColor:"#fff"}}>
+        <div style={{backgroundColor:"#fff"}}>
         {/* Login Modal Form */}
         <Modal  isOpen={this.state.isLoginOpen} toggle={this.isLoginOpen}>
            <div id="#modal_head">
