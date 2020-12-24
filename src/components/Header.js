@@ -47,7 +47,7 @@ class Header extends Component{
     render()
     {
         return(
-        <div style={{backgroundColor:"#fff"}}>
+        <div >
         {/* Login Modal Form */}
         <Modal  isOpen={this.state.isLoginOpen} toggle={this.isLoginOpen}>
            <div id="#modal_head">
@@ -127,7 +127,7 @@ class Header extends Component{
 
         {/* Navbar */}
         
-        <Navbar  className='py-0 px-0' expand='md'>
+        <Navbar style={{backgroundColor:"#fff"}} className='py-0 px-0' expand='md'>
         <div className="navbar-inner header w-100" >
             <Container >
             <NavbarToggler onClick={this.collapseNavbar}><FaBars /></NavbarToggler>
