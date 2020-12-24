@@ -1,16 +1,45 @@
 {
-    "posts" : [
-        {
-            "id" : 0,
-            "title" : "ex 1",
-            "body":"This is the start",
-            "due_date":"24/9/2020",
-            "category":"tryhard",
-            "pos_x" : 24,
-            "pos_y" : 24,
-            "status": "done"
-        }
-        
-    ]
-    
+  "posts": [
+    {
+      "title": "",
+      "body": "",
+      "start_date": "2020-12-24T15:19:25.854Z",
+      "due_date": "2020-12-25T18:30:00.000Z",
+      "board": "1",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "",
+      "body": "",
+      "start_date": "2020-12-24T15:19:58.231Z",
+      "due_date": "2020-12-30T18:30:00.000Z",
+      "board": "2",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "",
+      "body": "",
+      "start_date": "2020-12-24T15:22:15.670Z",
+      "due_date": "2020-12-25T15:22:15.670Z",
+      "board": "3",
+      "status": false,
+      "id": 3
+    }
+  ],
+  "boards": [
+    {
+      "title": "New Board",
+      "id": 1
+    },
+    {
+      "title": "New Board",
+      "id": 2
+    },
+    {
+      "title": "New Board",
+      "id": 3
+    }
+  ]
 }

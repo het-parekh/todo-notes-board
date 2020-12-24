@@ -1,11 +1,8 @@
 import React,{Component} from 'react'
-import {baseUrl} from '../shared/baseUrl'
-import {Container,Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody,
-    Form, FormGroup, Input, Label,} from 'reactstrap'
+import {Container,Navbar,Nav, NavbarToggler, Collapse, NavItem, Modal, } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
-import { FaHome,FaClipboard,FaRegEdit,FaCloud,FaBars, FaSignInAlt, FaRegistered,FaWindowClose,FaRegArrowAltCircleLeft}  from  'react-icons/fa'
-
+import { FaHome,FaClipboard,FaRegEdit,FaCloud,FaBars, FaSignInAlt, FaRegistered,
+        FaWindowClose,FaRegArrowAltCircleLeft}  from  'react-icons/fa'
 class Header extends Component{
     constructor(props){
         super(props)
@@ -85,7 +82,7 @@ class Header extends Component{
             </div>
             </div>
         </Modal>
-            {/* Register Modal Form */}
+        {/* Register Modal Form */}
         <Modal isOpen={this.state.isRegisterOpen}>
         <div id="#modal_head">
            <button onClick={this.switchmodals} className="button_slide slide_left mt-3 ml-3 px-2 py-2"><FaRegArrowAltCircleLeft size={28}/> Login </button>                
@@ -101,6 +98,10 @@ class Header extends Component{
                 <form>
                     <div className="form-group">
                     <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required="required"/>
+                    </div>
+                    <div className="form-group">
+                    <label for="username">Email</label>
                     <input type="text" id="username" name="username" required="required"/>
                     </div>
                     <div className="form-group">
@@ -125,8 +126,9 @@ class Header extends Component{
         </Modal>
 
         {/* Navbar */}
-        <Navbar  className='py-1 px-0  navbar-fixed-top' expand='md'>
-        <div className="navbar-inner header w-100">
+        
+        <Navbar  className='py-0 px-0' expand='md'>
+        <div className="navbar-inner header w-100" >
             <Container >
             <NavbarToggler onClick={this.collapseNavbar}><FaBars /></NavbarToggler>
             <div className="brand">
@@ -166,9 +168,6 @@ class Header extends Component{
 
         </div>
         <br/>
-    </Navbar>
-    <Navbar className='py-0 px-2 ml-3    navbar-fixed-top float-right'>
-
     </Navbar>
     </div>
     )}
