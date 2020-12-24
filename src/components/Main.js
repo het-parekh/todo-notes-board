@@ -55,7 +55,7 @@ class Main extends Component{
 
         return(
             <HashRouter basename="/">
-            <div>
+            <div style={{backgroudColor:"#fff"}}>
                 <Header />
                 <Switch>
                     <Route exact path = '/' component = {HomePage}/>

@@ -3,15 +3,6 @@
     {
       "title": "",
       "body": "",
-      "start_date": "2020-12-24T15:19:25.854Z",
-      "due_date": "2020-12-25T18:30:00.000Z",
-      "board": "1",
-      "status": false,
-      "id": 1
-    },
-    {
-      "title": "",
-      "body": "",
       "start_date": "2020-12-24T15:19:58.231Z",
       "due_date": "2020-12-30T18:30:00.000Z",
       "board": "2",
@@ -30,27 +21,23 @@
     {
       "title": "",
       "body": "",
-      "start_date": "2020-12-24T20:30:46.465Z",
-      "due_date": "2020-12-25T20:30:46.465Z",
-      "board": "1",
+      "start_date": "2020-12-24T20:42:47.062Z",
+      "due_date": "2020-12-25T20:42:47.062Z",
+      "board": "4",
       "status": false,
       "id": 4
     },
     {
       "title": "",
       "body": "",
-      "start_date": "2020-12-24T20:30:47.569Z",
-      "due_date": "2020-12-25T20:30:47.569Z",
-      "board": "1",
+      "start_date": "2020-12-24T20:42:59.281Z",
+      "due_date": "2020-12-25T20:42:59.281Z",
+      "board": "4",
       "status": false,
       "id": 5
     }
   ],
   "boards": [
-    {
-      "title": "New Board",
-      "id": 1
-    },
     {
       "title": "New Board",
       "id": 2
