@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import { switchBoard, deleteBoard,updateBoard,fetchAllBoards,addNewBoard,addNewPost,fetchAllPosts,deletePost,updatePost} from '../redux/ActionCreator'
 import Header from './Header'
 import SelectBoard from './SelectBoard'
-import { HashRouter } from 'react-router-dom'
+
 
 const mapStateToProps = state =>{
     return {
