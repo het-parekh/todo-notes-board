@@ -9,6 +9,7 @@
     "add": "^2.0.6",
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-animations": "^1.0.0",
     "react-date-picker": "^8.0.3",
@@ -29,8 +30,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"yarn run build",
-    "deploy":"gh-pages -d build development",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build development",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
