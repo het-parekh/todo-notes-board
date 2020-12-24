@@ -1,9 +1,10 @@
 import React,{ Component } from 'react'
-import {Switch,Redirect,Route,withRouter} from 'react-router-dom'
+import {Switch,Redirect,Route,withRouter,HashRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { switchBoard, deleteBoard,updateBoard,fetchAllBoards,addNewBoard,addNewPost,fetchAllPosts,deletePost,updatePost} from '../redux/ActionCreator'
 import Header from './Header'
 import SelectBoard from './SelectBoard'
+import { HashRouter } from 'react-router-dom'
 
 const mapStateToProps = state =>{
     return {
@@ -53,6 +54,7 @@ class Main extends Component{
         }
 
         return(
+            <HashRouter basename="/">
             <div>
                 <Header />
                 <Switch location = {this.props.location}>
@@ -60,6 +62,7 @@ class Main extends Component{
                     <Redirect to="/home" />
                 </Switch>
             </div>
+            </HashRouter>
         )
     }
 }
