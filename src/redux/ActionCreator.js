@@ -16,7 +16,7 @@ export const addNewBoard = () => (dispatch) =>{
     
     return fetch(baseUrl+"boards",{
         method:"POST",
-        mode:'no-cors',
+        
         body:JSON.stringify(newBoard),
         credentials:'same-origin',
         headers:{
@@ -60,7 +60,7 @@ export const deleteBoard = (board_id,openedBoard) => (dispatch) => {
     }
     return fetch(baseUrl+'boards/'+board_id,{
         method:"DELETE",
-        mode:'no-cors'
+        
     })
     .then(reposnse => reposnse.json())
     .then(() => dispatch(deleteBoard_mini(board_id,openedBoard)))
@@ -78,7 +78,7 @@ export const updateBoard = (board,value) =>(dispatch) =>{
     const body = board.split(" ")[0]
     return  fetch(baseUrl + 'boards/' + board.split(" ")[1],{
         method:"PATCH",
-        mode:'no-cors',
+        
         headers:{
             'Content-Type': 'application/json'
         },
@@ -122,7 +122,7 @@ export const addNewPost = (board_id) => (dispatch) =>{
     
     return fetch(baseUrl+"posts",{
         method:"POST",
-        mode:'no-cors',
+        
         body:JSON.stringify(newPost,),
         credentials:'same-origin',
         headers:{
@@ -163,7 +163,7 @@ export const deletePost_mini = (post_id) =>({
 export const deletePost = (post_id) => (dispatch) => {
     return fetch(baseUrl+'posts/'+post_id,{
         method:"DELETE",
-        mode:'no-cors'
+        
     })
     .then(reposnse => reposnse.json())
     .then(() => dispatch(deletePost_mini(post_id)))
@@ -181,7 +181,7 @@ export const updatePost = (post,value) =>(dispatch) =>{
     const body = post.split(" ")[0]
     return  fetch(baseUrl + 'posts/' + post.split(" ")[1],{
         method:"PATCH",
-        mode:'no-cors',
+        
         headers:{
             'Content-Type': 'application/json'
         },
