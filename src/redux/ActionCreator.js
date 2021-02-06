@@ -19,8 +19,8 @@ export const addNewBoard = () => (dispatch) =>{
         body:JSON.stringify(newBoard),
         credentials:'same-origin',
         headers:{
-            'Access-Control-Allow-Origin': '*',
-            'Accept': 'application/json;odata.metadata=full',
+            // 'Access-Control-Allow-Origin': '*',
+            // 'Accept': 'application/json;odata.metadata=full',
             'Content-Type': 'application/json',
         }
 
