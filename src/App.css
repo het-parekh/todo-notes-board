@@ -1,9 +1,7 @@
 /***********************
 Top NavBar
 ***********************/
-body{
-    background-color: black;
-}
+
 .navbar-inner li {
     line-height: 40px;
     letter-spacing: 2px;
@@ -169,16 +167,30 @@ Return back button
     box-shadow: inset -400px 0 0 0px darkblue;
   }
 
+/*************************************
+        ADD NEW BOARD BUTTON
+*************************************/
+.add-board{
+    padding:7px 15px!important;
+    margin-top:0.6px;
+    font-family:Ink Free;
+    border-radius:0px;
+    margin-left:1px;
+    border-radius:0px!important;
+}
+
+
+
 /***************************
         SINGLE POST
 ***************************/
 .square{
-    color:green;
+    color:#004d00;
     margin-top:-5px;
     cursor:pointer;
 }
 .square:hover{
-    color:limegreen
+    color:#037c03;
 }
 
 /*******************
@@ -193,29 +205,33 @@ Return back button
     transform:scale(1.2);
 }
 .tabs{
+    background-color: transparent!important;
     padding:.4rem .75rem ;
-    border: rgb(179, 174, 174) solid 1px;
-    margin-top:-31px;
-    background-color: #fff;
-    max-width:150px;
+    border: #17a2b8 solid 1px;
+    margin-top:0px;
+    width:150px;
     min-width:20px;
-    color:darkblue;
     font-weight:500px;
     border-radius: 0px;
     border-top-right-radius: 6px;
     text-align: left;
+    opacity: 50%;
+    
 }
 .tabs:hover{
-    border-left:dodgerblue solid 10px;
     border-bottom: none;
-    width:150px;
+    opacity:80%;
 }
 .tabs:focus{
     outline:none;
+
 }
 .tabs input{
+    color:#17a2b8;
+    background-color: transparent!important;
     float:left;
     width: 90px;
+    
 }
 .uneditable_tab{
     outline:none;
@@ -228,11 +244,22 @@ Return back button
 }
 
 .tab-selected{
-    width: 150px;
-    border-left:dodgerblue solid 10px;
+    /* animation-name: transition_width,bb;
+    animation-duration: 0.5s,0.5s; */
+    width: 200px;
+    border-left:#17a2b8 solid 10px;
     border-bottom: none;
-    
+    opacity:90%;
 }
+/* @keyframes transition_width {
+    from {width: 150px;}
+    to {width:200px;}
+  }
+@keyframes bb{
+    from{border-left:none}
+    to{border-left:dodgerblue solid 10px;}
+} */
+  
 /************************************
         ADD FIRST POST BUTTON
 ************************************/

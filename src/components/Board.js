@@ -36,12 +36,12 @@ class Board extends Component{
             var start_date = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'numeric',year: 'numeric'}).format(Date.parse(post.start_date))
             var due_date = new Date(Date.parse(post.due_date))
             var status = "PENDING"
-            var bgcolor = "#ffff80"
+            var bgcolor = "#ffff4d"
             var col = "#222"
             if (post.status == true){
                 status =  "COMPLETED"
-                bgcolor = "lightgreen"
-                col = "#fff"
+                bgcolor = "#ccff66"
+                col = "#009999"
             }
             else if(post.status == false && post.due_date < post.start_date){
                 status =  "OVERDUE!!"

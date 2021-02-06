@@ -4,6 +4,7 @@ import {Navbar,Button} from 'reactstrap'
 import Board from './Board';
 import {FaPlusCircle} from "react-icons/fa"
 import {AiOutlineCloseCircle} from 'react-icons/ai'
+
 //Animation LEFT
 //Animation LEFT
 //Animation LEFT
@@ -68,8 +69,8 @@ class SelectBoard extends Component{
         return(
         <>
        
-            <Navbar className='py-0 px-0' style={{marginBottom:"20px",justifyContent:"flex-start",backgroundColor:"#fff"}} >
-                <Button  onClick={this.props.addBoard} outline color = 'success' style={{paddingBottom:'9px',marginTop:"0.6px",fontFamily:"Ink Free",borderRadius:"0px",marginBottom:"30px"}}><FaPlusCircle /> Add Board</Button>
+            <Navbar className='py-0 px-0' style={{marginBottom:"20px",justifyContent:"flex-start",backgroundColor:"#ccffee"}} >
+                <Button className="add-board"  onClick={this.props.addBoard} outline color = 'info'><FaPlusCircle /> Add Board</Button>
                 {select_board}
             </Navbar>
             <div>

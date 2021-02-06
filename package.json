@@ -11,6 +11,8 @@
     "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
     "gh-pages": "^3.1.0",
+    "global": "^4.4.0",
+    "json-server": "^0.16.3",
     "react": "^16.13.1",
     "react-animations": "^1.0.0",
     "react-date-picker": "^8.0.3",
@@ -31,7 +33,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dbgit":"git push https://github.com/het-parekh/todo-notes-board.git --delete gh-pages && gh-pages-clean",
+    "server": "yarn json-server --watch db.json -p 3001",
+    "dbgit": "git push https://github.com/het-parekh/todo-notes-board.git --delete gh-pages && gh-pages-clean",
     "predeploy": "git add . && git commit -m 'upgrade' && git push https://github.com/het-parekh/todo-notes-board.git development && yarn run build",
     "deploy": "gh-pages -d build development --repo https://github.com/het-parekh/todo-notes-board.git",
     "build": "react-scripts build",

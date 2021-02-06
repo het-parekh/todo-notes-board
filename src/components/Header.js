@@ -137,7 +137,7 @@ class Header extends Component{
             <Collapse isOpen = {this.state.isNavCollapsed}    navbar>
                 <Nav navbar className="ml-auto">
                 <NavItem>
-                    <NavLink to='' className="nav-link"  >
+                    <NavLink to="" className="nav-link"  >
                     <FaHome /> Home
                     </NavLink>
                 </NavItem>

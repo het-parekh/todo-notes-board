@@ -1,5 +1,5 @@
 import * as ActionTypes from './ActionTypes'
-import {baseUrl_boards,baseUrl_posts} from '../shared/baseUrl'
+import {baseUrl} from '../shared/baseUrl'
 /************************
 Create New Board
 *************************/ 
@@ -9,16 +9,19 @@ export const addBoard = (new_board) => ({
 })
 
 export const addNewBoard = () => (dispatch) =>{
+
     const newBoard = {
         title:"New Board"
     }
     
-    return fetch(baseUrl_boards+"boards",{
+    return fetch(baseUrl+"boards",{
         method:"POST",
         body:JSON.stringify(newBoard),
         credentials:'same-origin',
         headers:{
-            'Content-Type': 'application/json'
+            'Access-Control-Allow-Origin': '*',
+            'Accept': 'application/json;odata.metadata=full',
+            'Content-Type': 'application/json',
         }
 
     })
@@ -38,7 +41,7 @@ export const fetchBoards = (boards) => ({
 })
 
 export const fetchAllBoards = () =>(dispatch) => {
-    return fetch(baseUrl_boards+"boards")
+    return fetch(baseUrl+"boards")
     .then(response => response.json())
     .then(boards => dispatch(fetchBoards(boards)))
     .catch(error => console.error('Error',error))
@@ -56,7 +59,7 @@ export const deleteBoard = (board_id,openedBoard) => (dispatch) => {
     if (board_id == openedBoard){
         openedBoard = 0
     }
-    return fetch(baseUrl_boards+'boards/'+board_id,{
+    return fetch(baseUrl+'boards/'+board_id,{
         method:"DELETE",
         
     })
@@ -74,7 +77,7 @@ export const updateBoard_mini = (patched_board) => ({
 })
 export const updateBoard = (board,value) =>(dispatch) =>{
     const body = board.split(" ")[0]
-    return  fetch(baseUrl_boards + 'boards/' + board.split(" ")[1],{
+    return  fetch(baseUrl + 'boards/' + board.split(" ")[1],{
         method:"PATCH",
         headers:{
             'Content-Type': 'application/json'
@@ -117,7 +120,7 @@ export const addNewPost = (board_id) => (dispatch) =>{
         status:false
     }
     
-    return fetch(baseUrl_posts+"posts",{
+    return fetch(baseUrl+"posts",{
         method:"POST",
         body:JSON.stringify(newPost,),
         credentials:'same-origin',
@@ -142,7 +145,7 @@ export const fetchPosts = (posts) => ({
 })
 
 export const fetchAllPosts = () =>(dispatch) => {
-    return fetch(baseUrl_posts+"posts")
+    return fetch(baseUrl+"posts")
     .then(response => response.json())
     .then(posts => dispatch(fetchPosts(posts)))
     .catch(error => console.error('Error',error))
@@ -157,7 +160,7 @@ export const deletePost_mini = (post_id) =>({
 }) 
 
 export const deletePost = (post_id) => (dispatch) => {
-    return fetch(baseUrl_posts+'posts/'+post_id,{
+    return fetch(baseUrl+'posts/'+post_id,{
         method:"DELETE",
         
     })
@@ -175,7 +178,7 @@ export const updatePost_mini = (patched_post) => ({
 })
 export const updatePost = (post,value) =>(dispatch) =>{
     const body = post.split(" ")[0]
-    return  fetch(baseUrl_posts + 'posts/' + post.split(" ")[1],{
+    return  fetch(baseUrl + 'posts/' + post.split(" ")[1],{
         method:"PATCH",
         
         headers:{
