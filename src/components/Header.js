@@ -152,14 +152,14 @@ class Header extends Component{
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <div  onClick={this.isLoginOpen} className="nav-link">
+                    <NavLink to=""  onClick={this.isLoginOpen} className="nav-link">
                      <FaSignInAlt /> Login
-                    </div>
+                    </NavLink>
                 </NavItem>
                 <NavItem>
-                    <div  onClick={this.isRegisterOpen} style={{}} className="nav-link">
+                    <NavLink  to="" onClick={this.isRegisterOpen} style={{}} className="nav-link">
                      <FaRegistered />egister
-                    </div>
+                    </NavLink>
                 </NavItem>
                 </Nav>
         
