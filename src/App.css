@@ -211,16 +211,16 @@ Return back button
     margin-top:0px;
     width:150px;
     min-width:20px;
-    font-weight:500px;
+    font-weight:500;
     border-radius: 0px;
     border-top-right-radius: 6px;
     text-align: left;
-    opacity: 50%;
+    opacity: 0.5;
     
 }
 .tabs:hover{
     border-bottom: none;
-    opacity:80%;
+    opacity:0.8;
 }
 .tabs:focus{
     outline:none;
@@ -249,7 +249,7 @@ Return back button
     width: 200px;
     border-left:#17a2b8 solid 10px;
     border-bottom: none;
-    opacity:90%;
+    opacity:0.9;
 }
 /* @keyframes transition_width {
     from {width: 150px;}
