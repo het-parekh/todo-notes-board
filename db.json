@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "title": "",
+      "body": "",
+      "start_date": "2021-02-03T18:16:20.091Z",
+      "due_date": "2021-02-04T18:16:20.091Z",
+      "board": "2",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "",
+      "body": "",
+      "start_date": "2021-02-03T18:29:42.747Z",
+      "due_date": "2021-02-04T18:29:42.747Z",
+      "board": "1",
+      "status": false,
+      "id": 3
+    }
+  ],
+  "boards": [
+    {
+      "title": "Double click to edit",
+      "id": 1
+    },
+    {
+      "title": "To Edit",
+      "id": 2
+    },
+    {
+      "title": "The Title",
+      "id": 3
+    }
+  ]
+}

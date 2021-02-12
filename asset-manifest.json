@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/todo-notes-board/static/css/main.ae9ca06a.chunk.css",
+    "main.js": "/todo-notes-board/static/js/main.d5956639.chunk.js",
+    "main.js.map": "/todo-notes-board/static/js/main.d5956639.chunk.js.map",
+    "runtime-main.js": "/todo-notes-board/static/js/runtime-main.8c0537bf.js",
+    "runtime-main.js.map": "/todo-notes-board/static/js/runtime-main.8c0537bf.js.map",
+    "static/css/2.37880fbb.chunk.css": "/todo-notes-board/static/css/2.37880fbb.chunk.css",
+    "static/js/2.f2d34066.chunk.js": "/todo-notes-board/static/js/2.f2d34066.chunk.js",
+    "static/js/2.f2d34066.chunk.js.map": "/todo-notes-board/static/js/2.f2d34066.chunk.js.map",
+    "index.html": "/todo-notes-board/index.html",
+    "static/css/2.37880fbb.chunk.css.map": "/todo-notes-board/static/css/2.37880fbb.chunk.css.map",
+    "static/css/main.ae9ca06a.chunk.css.map": "/todo-notes-board/static/css/main.ae9ca06a.chunk.css.map",
+    "static/js/2.f2d34066.chunk.js.LICENSE.txt": "/todo-notes-board/static/js/2.f2d34066.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c0537bf.js",
+    "static/css/2.37880fbb.chunk.css",
+    "static/js/2.f2d34066.chunk.js",
+    "static/css/main.ae9ca06a.chunk.css",
+    "static/js/main.d5956639.chunk.js"
+  ]
+}
