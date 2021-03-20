@@ -55,7 +55,6 @@ export const deleteBoard_mini = (board_id,openedBoard) =>({
 }) 
 
 export const deleteBoard = (board_id,openedBoard) => (dispatch) => {
-    console.log(openedBoard)
     if (board_id == openedBoard){
         openedBoard = 0
     }
@@ -190,7 +189,6 @@ export const updatePost = (post,value) =>(dispatch) =>{
     })
     .then(response => response.json())
     .then((data) => {
-        console.log(body)
         if(body!=="title" && body!=="body"){
             dispatch(updatePost_mini(data))
         }})

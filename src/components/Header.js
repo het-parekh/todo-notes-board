@@ -3,6 +3,12 @@ import {Container,Navbar,Nav, NavbarToggler, Collapse, NavItem, Modal, } from 'r
 import { NavLink } from 'react-router-dom'
 import { FaHome,FaClipboard,FaRegEdit,FaCloud,FaBars, FaSignInAlt, FaRegistered,
         FaWindowClose,FaRegArrowAltCircleLeft}  from  'react-icons/fa'
+import { Control, Form, Errors, actions } from 'react-redux-form'
+
+
+const maxLength = (len) => (val) => !(val) || (val.length <= len);
+const minLength = (len) => (val) => val && (val.length >= len);
+
 class Header extends Component{
     constructor(props){
         super(props)
@@ -10,11 +16,25 @@ class Header extends Component{
         this.isLoginOpen = this.isLoginOpen.bind(this)
         this.isRegisterOpen = this.isRegisterOpen.bind(this)
         this.switchmodals = this.switchmodals.bind(this)
+        this.handleRegister = this.handleRegister.bind(this)
+        this.isDoctor = this.isDoctor.bind(this)
         this.state = {
             isNavCollapsed:false,
             isLoginOpen:false,
-            isRegisterOpen:false
+            isRegisterOpen:false,
+            password:'',
+            confirm_password:'',
+            isDoctor:false
         }
+    }
+    isDoctor(){
+        this.setState({
+            isDoctor:!this.state.isDoctor
+        })
+    }
+
+    handleRegister(values){
+        console.log(values)
     }
 
     collapseNavbar(){
@@ -44,6 +64,7 @@ class Header extends Component{
             this.isLoginOpen()
         }
     }   
+    
     render()
     {
         return(
@@ -60,10 +81,10 @@ class Header extends Component{
                 <h1>Account Login</h1>
                 </div>
                 <div className="form-content">
-                <form>
+                <form >
                     <div className="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required="required"/>
+                    <input type="text" id="username" name="name" required="required"/>
                     </div>
                     <div className="form-group">
                     <label for="password">Password</label>
@@ -75,7 +96,7 @@ class Header extends Component{
                     </label><a className="form-recovery" href="#">Forgot Password?</a>
                     </div>
                     <div className="form-group">
-                    <button type="submit">Log In</button>
+                    <button   type="button">Log In</button>
                     </div>
                 </form>
                 </div>
@@ -95,31 +116,91 @@ class Header extends Component{
                 <h1>Register</h1>
                 </div>
                 <div className="form-content">
-                <form>
+                <Form model="register" onSubmit={(values) => this.handleRegister(values)} validators={{'':{passwordsMatch: (val) => val.password === val.confirm_password}}}>
+                    
+                    <Errors
+                        className="text-danger"
+                        model=".name"
+                        show="touched"
+                        messages={{
+                            passwordsMatch: 'Passwords do not match'
+                        }}
+                    />
                     <div className="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required="required"/>
+                    <label for="name" >Username</label>
+                    <Control.text model=".name" id="name" name="name"
+                        placeholder="Username"
+                        className="form-control"
+                        required
+                        validators = {{minLength: minLength(3),maxLength: maxLength(15)}}
+                            />
+                        <Errors
+                        className="text-danger"
+                        model=".name"
+                        show="touched"
+                        messages={{
+                            minLength: 'Must be greater than 2 characters',
+                            maxLength: 'Must be 15 characters or less'
+                        }}
+                        />
                     </div>
                     <div className="form-group">
-                    <label for="username">Email</label>
-                    <input type="text" id="username" name="username" required="required"/>
+                    <label for="email">Email</label>                   
+                        <Control type="email" model=".email" id="email" name="email"
+                            placeholder="Email"
+                            required
+                            className="form-control" />
+                        <Errors
+                        className="text-danger"
+                        model=".email"
+                        show="touched"
+                        messages={{
+                            minLength: 'Must be greater than 2 characters',
+                            maxLength: 'Must be 15 characters or less'
+                        }}
+                        />
+                   
                     </div>
                     <div className="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required="required"/>
+                    <Control type="password" model="password" id="password" name="password"
+                            placeholder="Password"
+                            required
+                            className="form-control"
+                                />
+                    </div>
+
+                    <div className="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <Control type="password" model="confirm_password" id="confirm_password" name="confirm_password"
+                            placeholder="Confirm Password"
+                            required
+                            className="form-control"
+                            // validators = {{passwordsMatch:(passwordsMatch)}}
+                    />
+                    <Errors
+                        className="text-danger"
+                        model=".confirm_password"
+                        show="touched"
+                        messages={{
+                            passwordsMatch: 'Password do not match',
+                        }}
+                        />
+                    </div>
+                   
+                    <div className="form-group">
+                    <label for="mobile">Phone Number</label>                   
+                        <Control type="tel" model=".mobile" id="mobile" name="mobile"
+                            placeholder="Phone Number"
+                            className="form-control"
+                            required
+                                />
+                    
                     </div>
                     <div className="form-group">
-                    <label for="password">Confirm Password</label>
-                    <input type="password" id="password" name="password" required="required"/>
+                    <button type="button" onClick={this.handleInput} >Register</button>
                     </div>
-                    <div className="form-group">
-                    <label for="password">Phone Number</label>
-                    <input type="password" id="password" name="password" required="required"/>
-                    </div>
-                    <div className="form-group">
-                    <button type="submit">Register</button>
-                    </div>
-                </form>
+                </Form>
                 </div>
             </div>
             </div>
